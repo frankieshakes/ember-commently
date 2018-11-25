@@ -2,7 +2,7 @@ export function initialize(application) {
   application.deferReadiness();
   let geo = navigator.geolocation;
   geo.getCurrentPosition((pos) => {
-    let coords = pos.coords;
+    let { coords } = pos;
     let loc = {
       lat: coords.latitude,
       lng: coords.longitude
